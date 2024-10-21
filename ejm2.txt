@@ -1,0 +1,1502 @@
+Genetic Algorithm
+----->Initializing Population
+2024-10-19 05:38:00.374982: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+Loading parent_0
+SUMMARY OF parent_0
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 30, 30, 32)          │           9,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 15, 15, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten (Flatten)                    │ (None, 7200)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 128)                 │         921,728 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 933,164 (3.56 MB)
+ Trainable params: 933,162 (3.56 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 2 (12.00 B)
+None
+FITNESS: 0.9656834006309509
+
+-------------------------------------
+Loading individual net_1
+--------------------------------------
+
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+SUMMARY OF net_1
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_2 (Conv2D)                    │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_3 (Conv2D)                    │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_1 (MaxPooling2D)       │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_4 (Conv2D)                    │ (None, 15, 15, 128)         │          18,560 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_5 (Conv2D)                    │ (None, 15, 15, 32)          │          36,896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_6 (Conv2D)                    │ (None, 8, 8, 64)            │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_1 (Flatten)                  │ (None, 4096)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (None, 256)                 │       1,048,832 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_3 (Dense)                      │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,130,876 (4.31 MB)
+ Trainable params: 1,130,874 (4.31 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 2 (12.00 B)
+None
+FITNESS:  0.9550125002861023
+
+-------------------------------------
+Loading individual net_2
+--------------------------------------
+
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+SUMMARY OF net_2
+Model: "sequential_3"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_12 (Conv2D)                   │ (None, 30, 30, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_13 (Conv2D)                   │ (None, 30, 30, 32)          │           9,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ average_pooling2d_1                  │ (None, 15, 15, 32)          │               0 │
+│ (AveragePooling2D)                   │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_14 (Conv2D)                   │ (None, 13, 13, 256)         │          73,984 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_15 (Conv2D)                   │ (None, 13, 13, 16)          │          36,880 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_16 (Conv2D)                   │ (None, 13, 13, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_3 (MaxPooling2D)       │ (None, 7, 7, 32)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_3 (Flatten)                  │ (None, 1568)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_5 (Dense)                      │ (None, 128)                 │         200,832 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_6 (Dense)                      │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 327,772 (1.25 MB)
+ Trainable params: 327,770 (1.25 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 2 (12.00 B)
+None
+FITNESS:  0.9190793037414551
+
+-------------------------------------
+Loading individual net_3
+--------------------------------------
+
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+SUMMARY OF net_3
+Model: "sequential_5"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_22 (Conv2D)                   │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_23 (Conv2D)                   │ (None, 30, 30, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_5 (MaxPooling2D)       │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_24 (Conv2D)                   │ (None, 15, 15, 16)          │           2,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_25 (Conv2D)                   │ (None, 15, 15, 64)          │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_26 (Conv2D)                   │ (None, 15, 15, 256)         │         147,712 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_6 (MaxPooling2D)       │ (None, 8, 8, 256)           │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_5 (Flatten)                  │ (None, 16384)               │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_8 (Dense)                      │ (None, 128)                 │       2,097,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_9 (Dense)                      │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 2,268,908 (8.66 MB)
+ Trainable params: 2,268,906 (8.66 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 2 (12.00 B)
+None
+FITNESS:  1.0274046659469604
+
+-------------------------------------
+Loading individual net_4
+--------------------------------------
+
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+SUMMARY OF net_4
+Model: "sequential_12"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_58 (Conv2D)                   │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_59 (Conv2D)                   │ (None, 30, 30, 32)          │           9,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_8 (MaxPooling2D)       │ (None, 15, 15, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_12 (Flatten)                 │ (None, 7200)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_22 (Dense)                     │ (None, 128)                 │         921,728 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_23 (Dense)                     │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 933,164 (3.56 MB)
+ Trainable params: 933,162 (3.56 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 2 (12.00 B)
+None
+FITNESS:  1.0383810997009277
+
+-------------------------------------
+Loading individual net_5
+--------------------------------------
+
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+SUMMARY OF net_5
+Model: "sequential_13"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_60 (Conv2D)                   │ (None, 32, 32, 16)          │             448 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_61 (Conv2D)                   │ (None, 30, 30, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_9 (MaxPooling2D)       │ (None, 15, 15, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_62 (Conv2D)                   │ (None, 13, 13, 256)         │          73,984 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_63 (Conv2D)                   │ (None, 13, 13, 16)          │          36,880 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_64 (Conv2D)                   │ (None, 13, 13, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_65 (Conv2D)                   │ (None, 7, 7, 128)           │          36,992 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_13 (Flatten)                 │ (None, 6272)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_24 (Dense)                     │ (None, 128)                 │         802,944 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_25 (Dense)                     │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 961,820 (3.67 MB)
+ Trainable params: 961,818 (3.67 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 2 (12.00 B)
+None
+FITNESS:  2.293708086013794
+
+-------------------------------------
+
+Creating individual net_6
+--------------------------------------
+
+----->Strong Mutation
+Block Mutation
+[(0, 0), (1, 2)]
+Creating a new block with two Convolutional layers and a Pooling layer
+Layer Mutation
+Changing Pooling layer at index 0 with Conv2D layer
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating Conv2D layer:
+-->changed self.padding from  valid  to  same
+Mutating Conv2D layer:
+-->changed self.filters from  256  to  512
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  256
+C:\Users\delca\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Training net_6
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 5s 90ms/step - accuracy: 0.1279 - loss: 2.7183 - val_accuracy: 0.1300 - val_loss: 2.4527
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 90ms/step - accuracy: 0.1434 - loss: 2.3061 - val_accuracy: 0.1200 - val_loss: 2.2256
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 89ms/step - accuracy: 0.2210 - loss: 2.1239 - val_accuracy: 0.1600 - val_loss: 2.1971
+SUMMARY OF net_6
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (None, 32, 32, 32)          │          18,464 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d (MaxPooling2D)         │ (None, 16, 16, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (None, 16, 16, 512)         │         147,968 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_3 (Conv2D)                    │ (None, 14, 14, 64)          │         294,976 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_4 (Conv2D)                    │ (None, 7, 7, 64)            │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten (Flatten)                    │ (None, 3136)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 256)                 │         803,072 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 2,611,542 (9.96 MB)
+ Trainable params: 1,305,770 (4.98 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 1,305,772 (4.98 MB)
+None
+FITNESS:  2.197094202041626
+
+-------------------------------------
+
+Creating individual net_7
+--------------------------------------
+
+----->Strong Mutation
+Block Mutation
+[(0, 0), (1, 2)]
+Creating a new block with two Convolutional layers and a Pooling layer
+Layer Mutation
+Changing Pooling layer at index 0 with Conv2D layer
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  64
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  64.0
+
+INDIVIDUAL ABORTED, CREATING A NEW ONE
+
+
+-------------------------------------
+
+Creating individual net_7
+--------------------------------------
+
+----->Strong Mutation
+Block Mutation
+[(0, 0), (1, 2)]
+Creating a new block with two Convolutional layers and a Pooling layer
+Layer Mutation
+Changing Pooling layer at index 0 with Conv2D layer
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Training net_7
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 48ms/step - accuracy: 0.1414 - loss: 2.5384 - val_accuracy: 0.0900 - val_loss: 2.2634
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 33ms/step - accuracy: 0.1767 - loss: 2.2533 - val_accuracy: 0.2200 - val_loss: 2.2546
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 33ms/step - accuracy: 0.2834 - loss: 2.1235 - val_accuracy: 0.3000 - val_loss: 1.9981
+SUMMARY OF net_7
+Model: "sequential_2"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_10 (Conv2D)                   │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_11 (Conv2D)                   │ (None, 30, 30, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_2 (MaxPooling2D)       │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_12 (Conv2D)                   │ (None, 15, 15, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_13 (Conv2D)                   │ (None, 15, 15, 256)         │          73,984 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_14 (Conv2D)                   │ (None, 8, 8, 64)            │         147,520 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_2 (Flatten)                  │ (None, 4096)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_3 (Dense)                      │ (None, 128)                 │         524,416 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_4 (Dense)                      │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,525,750 (5.82 MB)
+ Trainable params: 762,874 (2.91 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 762,876 (2.91 MB)
+None
+FITNESS:  1.9981095790863037
+
+-------------------------------------
+Initial Population:
+net_2 :  0.9190793037414551
+net_1 :  0.9550125002861023
+parent_0 :  0.9656834006309509
+net_3 :  1.0274046659469604
+net_4 :  1.0383810997009277
+net_7 :  1.9981095790863037
+net_6 :  2.197094202041626
+net_5 :  2.293708086013794
+--------------------------------------
+
+------------------------------------
+Generation 1
+-------------------------------------
+
+Creating Child 0
+----->Tournament selection
+Selected net_5 and net_2 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 1
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  128
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  32
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  64
+Mutating Dropout layer:
+-->changed self.rate from  0.15  to  0.2
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating MaxPooling2D layer:
+-->changed self.name from  MaxPooling2D  to  AveragePooling2D
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  64.0
+Child has been mutated
+
+INDIVIDUAL ABORTED, CREATING A NEW ONE
+
+----->Crossover
+Block Mutation
+[(0, 0), (1, 2)]
+Creating a new block with two Convolutional layers and a Pooling layer
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  32
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Training net_8
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 44ms/step - accuracy: 0.1156 - loss: 2.6359 - val_accuracy: 0.0800 - val_loss: 2.2673
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 31ms/step - accuracy: 0.1692 - loss: 2.2560 - val_accuracy: 0.0900 - val_loss: 2.2315
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 31ms/step - accuracy: 0.2439 - loss: 2.1017 - val_accuracy: 0.3200 - val_loss: 2.0191
+SUMMARY OF net_8
+Model: "sequential_4"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_25 (Conv2D)                   │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_26 (Conv2D)                   │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_6 (MaxPooling2D)       │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_27 (Conv2D)                   │ (None, 13, 13, 128)         │          18,560 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_28 (Conv2D)                   │ (None, 11, 11, 128)         │         147,584 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_29 (Conv2D)                   │ (None, 11, 11, 64)          │          73,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_7 (MaxPooling2D)       │ (None, 6, 6, 64)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_4 (Flatten)                  │ (None, 2304)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_6 (Dense)                      │ (None, 128)                 │         295,040 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_7 (Dense)                      │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,083,574 (4.13 MB)
+ Trainable params: 541,786 (2.07 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 541,788 (2.07 MB)
+None
+FITNESS:  2.019131660461426
+----->Evolution: Child net_8 with fitness 2.019131660461426 replaces parent net_5 with fitness 2.293708086013794
+
+Creating Child 1
+----->Tournament selection
+Selected net_1 and parent_0 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 1
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  256
+Mutating Conv2D layer:
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  32
+Child has been mutated
+Training net_9
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 40ms/step - accuracy: 0.1401 - loss: 3.2267 - val_accuracy: 0.1400 - val_loss: 2.4336
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 27ms/step - accuracy: 0.1431 - loss: 2.2271 - val_accuracy: 0.2200 - val_loss: 2.1078
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 29ms/step - accuracy: 0.2787 - loss: 2.0260 - val_accuracy: 0.2200 - val_loss: 2.0555
+SUMMARY OF net_9
+Model: "sequential_5"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_30 (Conv2D)                   │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_31 (Conv2D)                   │ (None, 30, 30, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_8 (MaxPooling2D)       │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_32 (Conv2D)                   │ (None, 15, 15, 256)         │          37,120 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_33 (Conv2D)                   │ (None, 15, 15, 16)          │          36,880 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_34 (Conv2D)                   │ (None, 15, 15, 16)          │           2,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_35 (Conv2D)                   │ (None, 8, 8, 32)            │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_5 (Flatten)                  │ (None, 2048)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_8 (Dense)                      │ (None, 256)                 │         524,544 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_9 (Dense)                      │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,238,198 (4.72 MB)
+ Trainable params: 619,098 (2.36 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 619,100 (2.36 MB)
+None
+FITNESS:  2.055450439453125
+----->Evolution: Child net_9 with fitness 2.055450439453125 replaces parent net_6 with fitness 2.197094202041626
+
+Creating Child 2
+----->Tournament selection
+Selected net_6 and net_2 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Changing Pooling layer at index 0 with Conv2D layer
+Parameters Mutation
+Mutating MaxPooling2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.filters from  256  to  512
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  128
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  256
+Child has been mutated
+Training net_10
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 4s 56ms/step - accuracy: 0.1003 - loss: 5.0692 - val_accuracy: 0.0900 - val_loss: 2.3024
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 43ms/step - accuracy: 0.1593 - loss: 2.2773 - val_accuracy: 0.1400 - val_loss: 2.6169
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 47ms/step - accuracy: 0.2085 - loss: 2.6824 - val_accuracy: 0.2300 - val_loss: 2.2077
+SUMMARY OF net_10
+Model: "sequential_6"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_36 (Conv2D)                   │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_37 (Conv2D)                   │ (None, 30, 30, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_9 (MaxPooling2D)       │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_38 (Conv2D)                   │ (None, 13, 13, 512)         │          74,240 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_39 (Conv2D)                   │ (None, 13, 13, 16)          │          73,744 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_40 (Conv2D)                   │ (None, 13, 13, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_41 (Conv2D)                   │ (None, 7, 7, 128)           │          36,992 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_6 (Flatten)                  │ (None, 6272)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_10 (Dense)                     │ (None, 256)                 │       1,605,888 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_11 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 3,618,198 (13.80 MB)
+ Trainable params: 1,809,098 (6.90 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 1,809,100 (6.90 MB)
+None
+FITNESS:  2.207686424255371
+----->Evolution: Child net_10 with fitness 2.207686424255371 is discarded
+
+Creating Child 3
+----->Tournament selection
+Selected parent_0 and net_3 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Parameters Mutation
+Mutating Conv2D layer:
+Child has been mutated
+Training net_11
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 20ms/step - accuracy: 0.1103 - loss: 2.5994 - val_accuracy: 0.1200 - val_loss: 2.2668
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 15ms/step - accuracy: 0.2738 - loss: 2.1134 - val_accuracy: 0.2300 - val_loss: 2.1645
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 20ms/step - accuracy: 0.4306 - loss: 1.6427 - val_accuracy: 0.2200 - val_loss: 2.1294
+SUMMARY OF net_11
+Model: "sequential_7"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_42 (Conv2D)                   │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_43 (Conv2D)                   │ (None, 30, 30, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_10 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_7 (Flatten)                  │ (None, 3600)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_12 (Dense)                     │ (None, 128)                 │         460,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_13 (Dense)                     │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 946,486 (3.61 MB)
+ Trainable params: 473,242 (1.81 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 473,244 (1.81 MB)
+None
+FITNESS:  2.129399299621582
+----->Evolution: Child net_11 with fitness 2.129399299621582 is discarded
+
+Creating Child 4
+----->Tournament selection
+Selected parent_0 and net_4 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Child has been mutated
+Training net_12
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 50ms/step - accuracy: 0.1290 - loss: 6.0833 - val_accuracy: 0.1400 - val_loss: 2.5430
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 41ms/step - accuracy: 0.3712 - loss: 2.0614 - val_accuracy: 0.1700 - val_loss: 2.3208
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 43ms/step - accuracy: 0.4642 - loss: 1.5724 - val_accuracy: 0.1100 - val_loss: 2.6862
+SUMMARY OF net_12
+Model: "sequential_8"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_44 (Conv2D)                   │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_45 (Conv2D)                   │ (None, 30, 30, 64)          │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_11 (MaxPooling2D)      │ (None, 15, 15, 64)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_8 (Flatten)                  │ (None, 14400)               │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_14 (Dense)                     │ (None, 256)                 │       3,686,656 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_15 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 7,455,894 (28.44 MB)
+ Trainable params: 3,727,946 (14.22 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 3,727,948 (14.22 MB)
+None
+FITNESS:  2.6862051486968994
+----->Evolution: Child net_12 with fitness 2.6862051486968994 is discarded
+
+Creating Child 5
+----->Tournament selection
+Selected net_2 and net_3 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Changing Pooling layer at index 0 with Conv2D layer
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  256
+Child has been mutated
+Training net_13
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 51ms/step - accuracy: 0.1283 - loss: 2.8541 - val_accuracy: 0.1300 - val_loss: 2.2400
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 46ms/step - accuracy: 0.1630 - loss: 2.3148 - val_accuracy: 0.2500 - val_loss: 2.0902
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 34ms/step - accuracy: 0.2786 - loss: 2.0894 - val_accuracy: 0.2700 - val_loss: 2.0416
+SUMMARY OF net_13
+Model: "sequential_9"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_46 (Conv2D)                   │ (None, 30, 30, 16)          │             448 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_47 (Conv2D)                   │ (None, 30, 30, 16)          │           2,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_12 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_48 (Conv2D)                   │ (None, 13, 13, 16)          │           2,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_49 (Conv2D)                   │ (None, 13, 13, 64)          │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_50 (Conv2D)                   │ (None, 13, 13, 256)         │         147,712 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_51 (Conv2D)                   │ (None, 6, 6, 64)            │         147,520 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_9 (Flatten)                  │ (None, 2304)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_16 (Dense)                     │ (None, 256)                 │         590,080 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_17 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,804,502 (6.88 MB)
+ Trainable params: 902,250 (3.44 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 902,252 (3.44 MB)
+None
+FITNESS:  2.0415523052215576
+----->Evolution: Child net_13 with fitness 2.0415523052215576 replaces parent net_6 with fitness 2.055450439453125
+
+------------------------------------
+Generation 2
+-------------------------------------
+
+Creating Child 0
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Parameters Mutation
+Mutating Conv2D layer:
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  256
+Child has been mutated
+Training net_8
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 17ms/step - accuracy: 0.1726 - loss: 2.8445 - val_accuracy: 0.2000 - val_loss: 2.1150
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 16ms/step - accuracy: 0.3344 - loss: 1.8438 - val_accuracy: 0.3000 - val_loss: 2.0351
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 13ms/step - accuracy: 0.5234 - loss: 1.4332 - val_accuracy: 0.2100 - val_loss: 2.1873
+SUMMARY OF net_8
+Model: "sequential_10"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_52 (Conv2D)                   │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_53 (Conv2D)                   │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_13 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_10 (Flatten)                 │ (None, 3600)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_18 (Dense)                     │ (None, 256)                 │         921,856 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_19 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,859,894 (7.09 MB)
+ Trainable params: 929,946 (3.55 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 929,948 (3.55 MB)
+None
+FITNESS:  2.187251091003418
+----->Evolution: Child net_8 with fitness 2.187251091003418 is discarded
+
+Creating Child 1
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating MaxPooling2D layer:
+-->changed self.name from  MaxPooling2D  to  AveragePooling2D
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  64.0
+Child has been mutated
+
+INDIVIDUAL ABORTED, CREATING A NEW ONE
+
+----->Crossover
+Block Mutation
+[(0, 0), (1, 1), (2, 2)]
+Inserting a Convolutional layer
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  32
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.padding from  valid  to  same
+Mutating Conv2D layer:
+-->changed self.filters from  16  to  32
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  64.0
+
+INDIVIDUAL ABORTED, CREATING A NEW ONE
+
+----->Crossover
+Block Mutation
+[(0, 0), (1, 1), (2, 1), (3, 2)]
+Removing a Conv2D layer at 0
+Layer Mutation
+Splitting Conv2D layer at index 2
+Parameters Mutation
+Mutating AveragePooling2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.padding from  valid  to  same
+Mutating Conv2D layer:
+-->changed self.filters from  16  to  32
+Mutating Conv2D layer:
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating FullyConnected layer:
+-->changed self.units from  256  to  512
+Training net_9
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 51ms/step - accuracy: 0.0933 - loss: 2.8593 - val_accuracy: 0.2400 - val_loss: 2.2782
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 35ms/step - accuracy: 0.1814 - loss: 2.2776 - val_accuracy: 0.2900 - val_loss: 2.1972
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 36ms/step - accuracy: 0.2220 - loss: 2.1055 - val_accuracy: 0.2300 - val_loss: 2.0279
+SUMMARY OF net_9
+Model: "sequential_13"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_63 (Conv2D)                   │ (None, 30, 30, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_64 (Conv2D)                   │ (None, 30, 30, 32)          │           9,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_17 (MaxPooling2D)      │ (None, 15, 15, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_65 (Conv2D)                   │ (None, 15, 15, 256)         │          73,984 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_66 (Conv2D)                   │ (None, 15, 15, 16)          │          36,880 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_67 (Conv2D)                   │ (None, 15, 15, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_68 (Conv2D)                   │ (None, 15, 15, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_18 (MaxPooling2D)      │ (None, 8, 8, 16)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_69 (Conv2D)                   │ (None, 8, 8, 16)            │           2,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_70 (Conv2D)                   │ (None, 4, 4, 64)            │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_13 (Flatten)                 │ (None, 1024)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_22 (Dense)                     │ (None, 512)                 │         524,800 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_23 (Dense)                     │ (None, 10)                  │           5,130 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,343,606 (5.13 MB)
+ Trainable params: 671,802 (2.56 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 671,804 (2.56 MB)
+None
+FITNESS:  2.0278592109680176
+----->Evolution: Child net_9 with fitness 2.0278592109680176 replaces parent net_6 with fitness 2.0415523052215576
+
+Creating Child 2
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating MaxPooling2D layer:
+-->changed self.name from  MaxPooling2D  to  AveragePooling2D
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  64
+Mutating MaxPooling2D layer:
+-->changed self.padding from  same  to  valid
+Child has been mutated
+Training net_10
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 33ms/step - accuracy: 0.0928 - loss: 2.3432 - val_accuracy: 0.1700 - val_loss: 2.3005
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 22ms/step - accuracy: 0.1579 - loss: 2.2786 - val_accuracy: 0.0700 - val_loss: 2.2912
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 22ms/step - accuracy: 0.1854 - loss: 2.1801 - val_accuracy: 0.2000 - val_loss: 2.1410
+SUMMARY OF net_10
+Model: "sequential_14"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_71 (Conv2D)                   │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_72 (Conv2D)                   │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_19 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_73 (Conv2D)                   │ (None, 15, 15, 64)          │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_74 (Conv2D)                   │ (None, 15, 15, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_75 (Conv2D)                   │ (None, 8, 8, 64)            │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_76 (Conv2D)                   │ (None, 6, 6, 128)           │          73,856 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_77 (Conv2D)                   │ (None, 4, 4, 64)            │          73,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_78 (Conv2D)                   │ (None, 4, 4, 16)            │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_79 (Conv2D)                   │ (None, 4, 4, 32)            │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_20 (MaxPooling2D)      │ (None, 2, 2, 32)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_14 (Flatten)                 │ (None, 128)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_24 (Dense)                     │ (None, 128)                 │          16,512 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_25 (Dense)                     │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 425,270 (1.62 MB)
+ Trainable params: 212,634 (830.60 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 212,636 (830.61 KB)
+None
+FITNESS:  2.1409900188446045
+----->Evolution: Child net_10 with fitness 2.1409900188446045 is discarded
+
+Creating Child 3
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 1
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating AveragePooling2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.padding from  valid  to  same
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating MaxPooling2D layer:
+-->changed self.name from  MaxPooling2D  to  AveragePooling2D
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Child has been mutated
+Training net_11
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 4s 56ms/step - accuracy: 0.0830 - loss: 2.4458 - val_accuracy: 0.0900 - val_loss: 2.2593
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 40ms/step - accuracy: 0.1528 - loss: 2.3015 - val_accuracy: 0.1200 - val_loss: 2.3104
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 56ms/step - accuracy: 0.1404 - loss: 2.2849 - val_accuracy: 0.1700 - val_loss: 2.1888
+SUMMARY OF net_11
+Model: "sequential_15"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_80 (Conv2D)                   │ (None, 30, 30, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_81 (Conv2D)                   │ (None, 30, 30, 32)          │          18,464 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_21 (MaxPooling2D)      │ (None, 15, 15, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_82 (Conv2D)                   │ (None, 15, 15, 256)         │          73,984 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_83 (Conv2D)                   │ (None, 13, 13, 8)           │          18,440 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_84 (Conv2D)                   │ (None, 13, 13, 8)           │             584 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_85 (Conv2D)                   │ (None, 13, 13, 64)          │           4,672 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_22 (MaxPooling2D)      │ (None, 7, 7, 64)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_86 (Conv2D)                   │ (None, 7, 7, 128)           │          73,856 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_87 (Conv2D)                   │ (None, 7, 7, 64)            │          73,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_88 (Conv2D)                   │ (None, 4, 4, 64)            │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_15 (Flatten)                 │ (None, 1024)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_26 (Dense)                     │ (None, 256)                 │         262,400 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_27 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,134,966 (4.33 MB)
+ Trainable params: 567,482 (2.16 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 567,484 (2.16 MB)
+None
+FITNESS:  2.188800573348999
+----->Evolution: Child net_11 with fitness 2.188800573348999 is discarded
+
+Creating Child 4
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating Conv2D layer:
+Mutating MaxPooling2D layer:
+-->changed self.name from  MaxPooling2D  to  AveragePooling2D
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  32
+Mutating Conv2D layer:
+-->changed self.filters from  256  to  512
+Child has been mutated
+Training net_12
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 4s 47ms/step - accuracy: 0.0893 - loss: 2.5249 - val_accuracy: 0.1600 - val_loss: 2.2674
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 38ms/step - accuracy: 0.1524 - loss: 2.2695 - val_accuracy: 0.1300 - val_loss: 2.2039
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 36ms/step - accuracy: 0.1511 - loss: 2.3009 - val_accuracy: 0.2800 - val_loss: 2.2265
+SUMMARY OF net_12
+Model: "sequential_16"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_89 (Conv2D)                   │ (None, 32, 32, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_90 (Conv2D)                   │ (None, 30, 30, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_23 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_91 (Conv2D)                   │ (None, 15, 15, 32)          │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_92 (Conv2D)                   │ (None, 15, 15, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_93 (Conv2D)                   │ (None, 15, 15, 32)          │          18,464 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_94 (Conv2D)                   │ (None, 8, 8, 64)            │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_95 (Conv2D)                   │ (None, 6, 6, 512)           │         295,424 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_96 (Conv2D)                   │ (None, 6, 6, 16)            │          73,744 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_97 (Conv2D)                   │ (None, 6, 6, 32)            │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_24 (MaxPooling2D)      │ (None, 3, 3, 32)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_16 (Flatten)                 │ (None, 288)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_28 (Dense)                     │ (None, 128)                 │          36,992 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_29 (Dense)                     │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 966,422 (3.69 MB)
+ Trainable params: 483,210 (1.84 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 483,212 (1.84 MB)
+None
+FITNESS:  2.2264623641967773
+----->Evolution: Child net_12 with fitness 2.2264623641967773 is discarded
+
+Creating Child 5
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating AveragePooling2D layer:
+-->changed self.name from  AveragePooling2D  to  MaxPooling2D
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Child has been mutated
+Training net_13
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 38ms/step - accuracy: 0.0998 - loss: 3.1173 - val_accuracy: 0.0600 - val_loss: 2.2984
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 33ms/step - accuracy: 0.1490 - loss: 2.2853 - val_accuracy: 0.1000 - val_loss: 2.7254
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 36ms/step - accuracy: 0.1610 - loss: 2.3228 - val_accuracy: 0.1900 - val_loss: 2.3866
+SUMMARY OF net_13
+Model: "sequential_17"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_98 (Conv2D)                   │ (None, 30, 30, 64)          │           1,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_99 (Conv2D)                   │ (None, 30, 30, 32)          │          18,464 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_25 (MaxPooling2D)      │ (None, 15, 15, 32)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_100 (Conv2D)                  │ (None, 15, 15, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_101 (Conv2D)                  │ (None, 13, 13, 64)          │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_102 (Conv2D)                  │ (None, 13, 13, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_103 (Conv2D)                  │ (None, 7, 7, 64)            │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_17 (Flatten)                 │ (None, 3136)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_30 (Dense)                     │ (None, 256)                 │         803,072 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_31 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,799,670 (6.87 MB)
+ Trainable params: 899,834 (3.43 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 899,836 (3.43 MB)
+None
+FITNESS:  2.3866171836853027
+----->Evolution: Child net_13 with fitness 2.3866171836853027 is discarded
+
+------------------------------------
+Generation 3
+-------------------------------------
+
+Creating Child 0
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Child has been mutated
+Training net_8
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 25ms/step - accuracy: 0.1051 - loss: 2.4185 - val_accuracy: 0.0800 - val_loss: 2.5037
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 16ms/step - accuracy: 0.1793 - loss: 2.2864 - val_accuracy: 0.3200 - val_loss: 2.1108
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 23ms/step - accuracy: 0.2727 - loss: 2.1234 - val_accuracy: 0.2300 - val_loss: 2.1560
+SUMMARY OF net_8
+Model: "sequential_18"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_104 (Conv2D)                  │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_105 (Conv2D)                  │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_26 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_106 (Conv2D)                  │ (None, 15, 15, 128)         │          18,560 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_107 (Conv2D)                  │ (None, 15, 15, 16)          │          18,448 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_108 (Conv2D)                  │ (None, 8, 8, 64)            │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_109 (Conv2D)                  │ (None, 4, 4, 32)            │          18,464 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_18 (Flatten)                 │ (None, 512)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_32 (Dense)                     │ (None, 128)                 │          65,664 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_33 (Dense)                     │ (None, 10)                  │           1,290 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 274,454 (1.05 MB)
+ Trainable params: 137,226 (536.04 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 137,228 (536.05 KB)
+None
+FITNESS:  2.1559555530548096
+----->Evolution: Child net_8 with fitness 2.1559555530548096 is discarded
+
+Creating Child 1
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating MaxPooling2D layer:
+-->changed self.padding from  valid  to  same
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  64
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  256
+Child has been mutated
+Training net_9
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 35ms/step - accuracy: 0.1279 - loss: 2.3242 - val_accuracy: 0.0900 - val_loss: 2.2907
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 24ms/step - accuracy: 0.1320 - loss: 2.2486 - val_accuracy: 0.1100 - val_loss: 2.2631
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 24ms/step - accuracy: 0.1581 - loss: 2.2014 - val_accuracy: 0.1400 - val_loss: 2.2683
+SUMMARY OF net_9
+Model: "sequential_19"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_110 (Conv2D)                  │ (None, 32, 32, 16)          │             448 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_111 (Conv2D)                  │ (None, 30, 30, 16)          │           2,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_27 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_112 (Conv2D)                  │ (None, 13, 13, 128)         │          18,560 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_113 (Conv2D)                  │ (None, 13, 13, 64)          │          73,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_114 (Conv2D)                  │ (None, 7, 7, 64)            │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_115 (Conv2D)                  │ (None, 5, 5, 64)            │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_116 (Conv2D)                  │ (None, 3, 3, 64)            │          36,928 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_117 (Conv2D)                  │ (None, 3, 3, 16)            │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_118 (Conv2D)                  │ (None, 3, 3, 16)            │           2,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_28 (MaxPooling2D)      │ (None, 2, 2, 16)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_19 (Flatten)                 │ (None, 64)                  │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_34 (Dense)                     │ (None, 256)                 │          16,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_35 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 473,334 (1.81 MB)
+ Trainable params: 236,666 (924.48 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 236,668 (924.49 KB)
+None
+FITNESS:  2.2683043479919434
+----->Evolution: Child net_9 with fitness 2.2683043479919434 is discarded
+
+Creating Child 2
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating FullyConnected layer:
+-->changed self.units from  256  to  512
+Child has been mutated
+Training net_10
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 20ms/step - accuracy: 0.1156 - loss: 3.0959 - val_accuracy: 0.1500 - val_loss: 2.1087
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 17ms/step - accuracy: 0.3419 - loss: 1.8626 - val_accuracy: 0.3100 - val_loss: 1.8874
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 18ms/step - accuracy: 0.5321 - loss: 1.3705 - val_accuracy: 0.2600 - val_loss: 2.5116
+SUMMARY OF net_10
+Model: "sequential_20"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_119 (Conv2D)                  │ (None, 30, 30, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_120 (Conv2D)                  │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_29 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_20 (Flatten)                 │ (None, 3600)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_36 (Dense)                     │ (None, 512)                 │       1,843,712 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_37 (Dense)                     │ (None, 10)                  │           5,130 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 3,708,726 (14.15 MB)
+ Trainable params: 1,854,362 (7.07 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 1,854,364 (7.07 MB)
+None
+FITNESS:  2.5116193294525146
+----->Evolution: Child net_10 with fitness 2.5116193294525146 is discarded
+
+Creating Child 3
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 1
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating AveragePooling2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  128
+Child has been mutated
+Training net_11
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 30ms/step - accuracy: 0.1014 - loss: 2.4804 - val_accuracy: 0.0600 - val_loss: 2.3037
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 22ms/step - accuracy: 0.1193 - loss: 2.3009 - val_accuracy: 0.0600 - val_loss: 2.3042
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 23ms/step - accuracy: 0.1130 - loss: 2.3066 - val_accuracy: 0.0600 - val_loss: 2.3062
+SUMMARY OF net_11
+Model: "sequential_21"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_121 (Conv2D)                  │ (None, 30, 30, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_122 (Conv2D)                  │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_30 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_123 (Conv2D)                  │ (None, 13, 13, 256)         │          37,120 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_124 (Conv2D)                  │ (None, 13, 13, 8)           │          18,440 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_125 (Conv2D)                  │ (None, 13, 13, 8)           │             584 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_126 (Conv2D)                  │ (None, 11, 11, 32)          │           2,336 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_31 (MaxPooling2D)      │ (None, 6, 6, 32)            │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_127 (Conv2D)                  │ (None, 6, 6, 128)           │          36,992 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_128 (Conv2D)                  │ (None, 6, 6, 16)            │          18,448 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_129 (Conv2D)                  │ (None, 3, 3, 128)           │          18,560 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_21 (Flatten)                 │ (None, 1152)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_38 (Dense)                     │ (None, 256)                 │         295,168 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_39 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 871,478 (3.32 MB)
+ Trainable params: 435,738 (1.66 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 435,740 (1.66 MB)
+None
+FITNESS:  2.3062074184417725
+----->Evolution: Child net_11 with fitness 2.3062074184417725 is discarded
+
+Creating Child 4
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  64
+Mutating AveragePooling2D layer:
+-->changed self.padding from  same  to  valid
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  128
+Mutating Conv2D layer:
+-->changed self.filters from  32  to  16
+Mutating Conv2D layer:
+-->changed self.filters from  64  to  32
+Child has been mutated
+Training net_12
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 4s 52ms/step - accuracy: 0.1115 - loss: 3.4219 - val_accuracy: 0.0600 - val_loss: 2.4165
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 43ms/step - accuracy: 0.1481 - loss: 2.2707 - val_accuracy: 0.2200 - val_loss: 2.1815
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 45ms/step - accuracy: 0.2021 - loss: 2.1549 - val_accuracy: 0.1500 - val_loss: 2.1613
+SUMMARY OF net_12
+Model: "sequential_22"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_130 (Conv2D)                  │ (None, 30, 30, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_131 (Conv2D)                  │ (None, 30, 30, 64)          │          18,496 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_32 (MaxPooling2D)      │ (None, 15, 15, 64)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_132 (Conv2D)                  │ (None, 15, 15, 128)         │          73,856 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_133 (Conv2D)                  │ (None, 15, 15, 64)          │          73,792 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_134 (Conv2D)                  │ (None, 15, 15, 16)          │           9,232 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_135 (Conv2D)                  │ (None, 8, 8, 32)            │           4,640 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_22 (Flatten)                 │ (None, 2048)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_40 (Dense)                     │ (None, 256)                 │         524,544 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_41 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 1,416,054 (5.40 MB)
+ Trainable params: 708,026 (2.70 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 708,028 (2.70 MB)
+None
+FITNESS:  2.161303997039795
+----->Evolution: Child net_12 with fitness 2.161303997039795 is discarded
+
+Creating Child 5
+----->Elitism selection
+Selected net_2 and net_1 for reproduction
+----->Crossover
+Child has been created
+----->Soft Mutation
+Layer Mutation
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating FullyConnected layer:
+-->changed self.units from  256  to  128.0
+Child has been mutated
+
+INDIVIDUAL ABORTED, CREATING A NEW ONE
+
+----->Crossover
+Block Mutation
+[(0, 0), (1, 1), (2, 2)]
+Inserting a Convolutional layer
+Layer Mutation
+Splitting Conv2D layer at index 0
+Parameters Mutation
+Mutating Conv2D layer:
+-->changed self.filters from  128  to  64
+Mutating Conv2D layer:
+-->changed self.padding from  same  to  valid
+Mutating FullyConnected layer:
+-->changed self.units from  128  to  256
+Training net_13
+Epoch 1/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 3s 52ms/step - accuracy: 0.1078 - loss: 2.4785 - val_accuracy: 0.1100 - val_loss: 2.2230
+Epoch 2/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 2s 42ms/step - accuracy: 0.1656 - loss: 2.2547 - val_accuracy: 0.1200 - val_loss: 2.0415
+Epoch 3/3
+38/38 ━━━━━━━━━━━━━━━━━━━━ 1s 37ms/step - accuracy: 0.2480 - loss: 2.1002 - val_accuracy: 0.3400 - val_loss: 1.8842
+SUMMARY OF net_13
+Model: "sequential_24"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d_138 (Conv2D)                  │ (None, 32, 32, 32)          │             896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_139 (Conv2D)                  │ (None, 30, 30, 16)          │           4,624 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ max_pooling2d_34 (MaxPooling2D)      │ (None, 15, 15, 16)          │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_140 (Conv2D)                  │ (None, 15, 15, 64)          │           9,280 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_141 (Conv2D)                  │ (None, 13, 13, 256)         │         147,712 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_142 (Conv2D)                  │ (None, 13, 13, 32)          │          73,760 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_143 (Conv2D)                  │ (None, 7, 7, 32)            │           9,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_144 (Conv2D)                  │ (None, 4, 4, 32)            │           9,248 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten_24 (Flatten)                 │ (None, 512)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_43 (Dense)                     │ (None, 256)                 │         131,328 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_44 (Dense)                     │ (None, 10)                  │           2,570 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 777,334 (2.97 MB)
+ Trainable params: 388,666 (1.48 MB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 388,668 (1.48 MB)
+None
+FITNESS:  1.8841885328292847
+----->Evolution: Child net_13 with fitness 1.8841885328292847 replaces parent net_6 with fitness 2.0278592109680176
+
